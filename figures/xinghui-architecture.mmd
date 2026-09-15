@@ -1,0 +1,39 @@
+flowchart LR
+  user["用户<br/>种植户 / 加工户"] --> view
+  subgraph presentation["展示层"]
+    view["HTML5 / CSS3 / JavaScript<br/>SVG 图表与响应式布局"]
+  end
+  subgraph business["业务逻辑层"]
+    adapter["服务适配器<br/>输入校验与状态管理"]
+    rules["规则引擎与决策表<br/>方案生成与安全边界"]
+  end
+  subgraph service["AI / 规则服务层"]
+    vision["qwen3-vl-flash<br/>病虫害视觉辅助研判"]
+    text["qwen-flash<br/>种植与干燥文本增强"]
+    fallback["异常回退<br/>保留规则结果"]
+  end
+  subgraph data["数据层"]
+    demo["17 个产区<br/>2019—2025 演示数据"]
+    knowledge["病害知识映射<br/>工艺参数表"]
+    records["匿名鉴定记录<br/>可选留存"]
+  end
+  view --> adapter
+  adapter --> rules
+  adapter --> vision
+  adapter --> text
+  rules --> text
+  vision --> adapter
+  text --> adapter
+  text -.超时 / 异常.-> fallback
+  fallback --> adapter
+  demo --> rules
+  knowledge --> rules
+  knowledge --> vision
+  records --> adapter
+  adapter --> view
+  classDef layer fill:#f4f7f5,stroke:#195d42,stroke-width:2px,color:#173d2c;
+  classDef ai fill:#fff7df,stroke:#c79535,stroke-width:2px,color:#5a4319;
+  classDef store fill:#eef4fb,stroke:#6289b5,stroke-width:2px,color:#20364c;
+  class presentation,business,service,data layer;
+  class vision,text,fallback ai;
+  class demo,knowledge,records store;

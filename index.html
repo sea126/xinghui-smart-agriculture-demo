@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#163f2b">
+  <title>星茴智农 · 八角产业智能决策平台</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-page="overview" aria-label="返回总览">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 4l4.4 13.3L42 13l-8.3 11L42 35l-13.6-4.3L24 44l-4.4-13.3L6 35l8.3-11L6 13l13.6 4.3L24 4Z"/><circle cx="24" cy="24" r="5"/></svg>
+        </span>
+        <span><strong>星茴智农</strong><small>八角产业智能决策平台</small></span>
+      </a>
+
+      <nav class="main-nav" aria-label="主导航">
+        <p class="nav-label">工作台</p>
+        <button class="nav-item active" data-page="overview">
+          <span class="nav-icon">⌂</span><span>产业总览</span>
+        </button>
+        <p class="nav-label">智能服务</p>
+        <button class="nav-item" data-page="disease">
+          <span class="nav-icon">◎</span><span>病虫害识别</span><em>AI</em>
+        </button>
+        <button class="nav-item" data-page="yield">
+          <span class="nav-icon">⌁</span><span>产量预测与定制种植方案</span>
+        </button>
+        <button class="nav-item" data-page="drying">
+          <span class="nav-icon">♨</span><span>品质干燥方案</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-card">
+        <span class="pulse-dot"></span>
+        <div><strong>系统运行正常</strong><small>产业数据引擎已加载</small></div>
+      </div>
+      <div class="sidebar-foot">数据更新至 2025 年</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="打开菜单">☰</button>
+        <div class="breadcrumb"><span>星茴智农</span><b>/</b><strong id="pageCrumb">产业总览</strong></div>
+        <div class="top-actions">
+          <div class="weather"><span>◷</span><div><strong id="currentDate">—</strong><small>广西八角主产区</small></div></div>
+          <button class="icon-btn" aria-label="通知">♢<i></i></button>
+          <div class="avatar">演</div>
+        </div>
+      </header>
+
+      <div class="page-wrap">
+        <section class="page active" id="page-overview">
+          <div class="hero">
+            <div class="hero-copy">
+              <span class="eyebrow light">STAR ANISE INTELLIGENCE</span>
+              <h1>让每一颗八角，<br><em>生长得更有数。</em></h1>
+              <p>从田间病害诊断到产量趋势研判，再到采后干燥决策，为八角全产业链提供轻量、直观的数字化支持。</p>
+              <div class="hero-actions">
+                <button class="btn btn-gold" data-page="disease">开始智能识别 <span>→</span></button>
+                <button class="btn btn-ghost" data-page="yield">查看产量与方案</button>
+              </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="orbit orbit-one"></div>
+              <div class="orbit orbit-two"></div>
+              <div class="star-anise">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <i></i>
+              </div>
+              <div class="floating-stat stat-a"><small>覆盖主产区</small><strong>17 <i>个</i></strong></div>
+              <div class="floating-stat stat-b"><small>历史数据</small><strong>7 <i>年</i></strong></div>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <div><span class="eyebrow">INTELLIGENT MODULES</span><h2>三大智能模块</h2></div>
+            <p>用真实产区数据，串联种植、预测与加工关键环节</p>
+          </div>
+
+          <div class="capability-grid">
+            <article class="capability-card card-disease" data-page="disease">
+              <div class="card-top"><span class="num">01</span><span class="mini-icon">◎</span></div>
+              <h3>病虫害拍照识别</h3>
+              <p>上传叶片或植株照片，快速匹配病害特征，并给出农业与化学防治建议。</p>
+              <div class="tag-row"><span>5 类病虫害</span><span>快速诊断</span></div>
+              <button class="text-link">进入识别 <span>↗</span></button>
+            </article>
+            <article class="capability-card card-yield" data-page="yield">
+              <div class="card-top"><span class="num">02</span><span class="mini-icon">⌁</span></div>
+              <h3>产量预测与定制种植方案</h3>
+              <p>先预测趋势，再结合地块条件生成年度种植方案。</p>
+              <div class="tag-row"><span>17 个产区</span><span>规则定制</span></div>
+              <button class="text-link">生成方案 <span>↗</span></button>
+            </article>
+            <article class="capability-card card-drying" data-page="drying">
+              <div class="card-top"><span class="num">03</span><span class="mini-icon">♨</span></div>
+              <h3>品质干燥方案</h3>
+              <p>根据含水量与生产目标，智能匹配干燥工艺、温度、时间及品质指标。</p>
+              <div class="tag-row"><span>5 种工艺</span><span>品质预警</span></div>
+              <button class="text-link">获取方案 <span>↗</span></button>
+            </article>
+          </div>
+
+          <div class="overview-bottom">
+            <article class="panel insight-panel">
+              <div class="panel-title"><div><span class="eyebrow">DATA INSIGHT</span><h3>影响产量的关键因素</h3></div><span class="chip">119 条样本</span></div>
+              <div class="factor-bars">
+                <div class="factor"><div><span>大小年规律</span><b>+0.58</b></div><i><em style="width:92%"></em></i></div>
+                <div class="factor"><div><span>花期均温</span><b class="negative">−0.42</b></div><i><em class="negative-bar" style="width:67%"></em></i></div>
+                <div class="factor"><div><span>土壤 pH</span><b>+0.35</b></div><i><em style="width:56%"></em></i></div>
+              </div>
+              <p class="source-note">数据来源：广西八角 17 个主产区 2019–2025 年面板数据</p>
+            </article>
+            <article class="panel quick-panel">
+              <div class="panel-title"><div><span class="eyebrow">QUICK START</span><h3>今日建议</h3></div><span class="date-badge" id="todayBadge">—</span></div>
+              <div class="advice-item"><span class="advice-icon">叶</span><div><strong>高温高湿期注意炭疽病</strong><p>建议保持林间通风，并加强叶片巡检。</p></div></div>
+              <div class="advice-item"><span class="advice-icon gold">温</span><div><strong>干燥温度建议不超过 60℃</strong><p>有助于降低挥发性风味成分损失。</p></div></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="page" id="page-disease">
+          <div class="page-heading">
+            <div><span class="eyebrow">DISEASE RECOGNITION</span><h1>病虫害智能识别</h1><p>上传八角叶片或植株照片，快速获取识别结果与防治建议。</p></div>
+            <div class="heading-actions">
+              <button class="btn btn-outline" id="quickDemoBtn">▶ 一键体验识别</button>
+              <span class="status-pill"><i></i><span id="recognitionStatus">识别服务已就绪</span></span>
+            </div>
+          </div>
+          <div class="disease-layout">
+            <article class="panel upload-panel">
+              <div class="panel-title"><div><span class="step-badge">01</span><h3>上传病害图片</h3></div><button class="clear-btn" id="resetImage">重置</button></div>
+              <label class="upload-zone" id="uploadZone">
+                <input type="file" id="imageInput" accept="image/*">
+                <img id="previewImage" alt="待识别图片">
+                <div class="upload-empty" id="uploadEmpty">
+                  <span class="upload-icon">＋</span>
+                  <strong>点击上传或拖入图片</strong>
+                  <p>支持 JPG、PNG 格式，建议图片主体清晰</p>
+                  <span class="upload-button">选择本地图片</span>
+                </div>
+                <span class="scan-line" id="scanLine"></span>
+              </label>
+              <label class="upload-consent"><input type="checkbox" id="saveUploadConsent" checked><span>匿名保存本次上传图片与鉴定结果，用于后续历史记录和样本积累；请勿上传含个人信息的图片。</span></label>
+              <div class="sample-title"><span>快速体验：选择内置样本</span><i></i></div>
+              <div class="sample-row" id="sampleRow">
+                <button class="sample active" data-code="TZ"><img src="./assets/diseases/anthracnose.jpg" alt=""><span>炭疽病</span></button>
+                <button class="sample" data-code="MY"><img src="./assets/diseases/sooty-mold.jpg" alt=""><span>煤烟病</span></button>
+                <button class="sample" data-code="YB"><img src="./assets/diseases/leaf-spot.jpg" alt=""><span>叶斑病</span></button>
+                <button class="sample" data-code="GF"><img src="./assets/diseases/root-rot.jpg" alt=""><span>根腐病</span></button>
+                <button class="sample" data-code="CH"><img src="./assets/diseases/looper.jpg" alt=""><span>八角尺蠖</span></button>
+              </div>
+              <button class="btn btn-primary btn-wide" id="recognizeBtn"><span>◎</span> 开始智能识别</button>
+            </article>
+
+            <article class="panel result-panel" id="resultPanel">
+              <div class="result-placeholder" id="resultPlaceholder">
+                <div class="radar"><span></span><i></i></div>
+                <h3>等待识别</h3><p>选择一张图片并点击“开始智能识别”</p>
+              </div>
+              <div class="result-content" id="resultContent">
+                <div class="panel-title"><div><span class="step-badge">02</span><h3>识别结果</h3></div><span class="result-tag">匹配成功</span></div>
+                <div class="diagnosis-card">
+                  <div><span class="diagnosis-label">识别为</span><h2 id="diseaseName">炭疽病</h2><p id="diseaseLatin">ANTHRACNOSE · TZ</p></div>
+                  <div class="confidence"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="34"/><circle class="progress" cx="40" cy="40" r="34"/></svg><div><strong id="confidenceValue">96.8</strong><span>%</span><small>置信度</small></div></div>
+                </div>
+                <div class="result-meta-row">
+                  <span>图像质量 <b id="imageQuality">良好</b></span>
+                  <span>风险等级 <b id="riskLevel">中度</b></span>
+                  <span>识别引擎 <b id="modelVersion">—</b></span>
+                  <span>图片记录 <b id="recordStatus">—</b></span>
+                </div>
+                <div class="symptom-box"><span>症状描述</span><p id="symptomText"></p></div>
+                <div class="ai-basis-box"><span>AI 研判依据</span><p id="analysisBasis"></p></div>
+                <div class="treatment-tabs"><button class="active" data-treatment="farm">农业防治</button><button data-treatment="chemical">化学防治</button></div>
+                <div class="treatment-content"><span class="treatment-no">建议</span><p id="treatmentText"></p></div>
+                <div class="result-note">识别结果用于辅助研判，实际生产请结合现场调查和当地农技人员意见。<span id="requestId"></span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="page" id="page-yield">
+          <div class="page-heading">
+             <div><span class="eyebrow">YIELD &amp; PLANTING PLAN</span><h1>产量预测与定制种植方案</h1><p>先预测区域趋势，再结合地块、树龄、品种与目标生成年度管理方案。</p></div>
+            <button class="btn btn-outline" id="exportBtn">↓ 导出分析报告</button>
+          </div>
+          <article class="filter-bar panel">
+            <label><span>选择产区</span><select id="regionSelect"><option>德保县</option><option>那坡县</option><option>右江区</option><option>田林县</option><option>凌云县</option><option>上林县</option><option>宁明县</option><option>防城区</option><option>上思县</option><option>浦北县</option><option>容县</option><option>福绵区</option><option>北流市</option><option>藤县</option><option>苍梧县</option><option>金秀县</option><option>凤山县</option></select></label>
+            <label><span>预测年份</span><select id="yearSelect"><option>2026 年</option></select></label>
+            <button class="btn btn-primary" id="forecastBtn">生成趋势预测 →</button>
+            <div class="filter-meta"><span>数据样本</span><strong>2019—2025</strong></div>
+          </article>
+          <div class="metric-grid">
+            <article class="metric-card"><span class="metric-icon green">叶</span><div><small>2025 年亩产</small><strong id="currentYield">540 <i>kg/亩</i></strong><p class="up">↑ 28.6% <span>较上年</span></p></div></article>
+            <article class="metric-card featured"><span class="metric-icon gold">预</span><div><small>2026 年预测区间</small><strong id="forecastYield">405—455 <i>kg/亩</i></strong><p><span>预计进入小年周期</span></p></div></article>
+            <article class="metric-card"><span class="metric-icon blue">温</span><div><small>花期均温</small><strong id="tempMetric">20.2 <i>℃</i></strong><p class="good">适宜区间</p></div></article>
+            <article class="metric-card"><span class="metric-icon soil">壤</span><div><small>年均土壤 pH</small><strong id="phMetric">4.9</strong><p class="warn">建议适度调理</p></div></article>
+          </div>
+           <div class="yield-main-grid">
+            <article class="panel chart-panel">
+              <div class="panel-title"><div><h3 id="chartTitle">德保县鲜果亩产趋势</h3><p>单位：kg/亩</p></div><div class="legend"><span><i class="solid"></i>历史产量</span><span><i class="dash"></i>预测趋势</span></div></div>
+              <div class="chart-wrap">
+                <svg id="yieldChart" viewBox="0 0 760 320" role="img" aria-label="产量趋势折线图"></svg>
+              </div>
+              <div class="chart-insight"><span>趋势研判</span><p id="trendText">2026 年预计进入小年周期，综合历史波动与气候因素，亩产预测区间为 405—455 kg。</p></div>
+            </article>
+            <article class="panel factors-panel">
+              <div class="panel-title"><div><h3>产量影响因子</h3><p>相关系数越高，影响越显著</p></div><span class="chip">相关性分析</span></div>
+              <div class="factor-rank">
+                <div><span class="rank">1</span><div><b>大小年规律</b><small>中度正相关</small></div><strong>+0.58</strong></div>
+                <div><span class="rank">2</span><div><b>花期均温</b><small>中度负相关</small></div><strong class="negative">−0.42</strong></div>
+                <div><span class="rank">3</span><div><b>土壤 pH</b><small>弱至中度正相关</small></div><strong>+0.35</strong></div>
+                <div><span class="rank">4</span><div><b>花期降雨</b><small>存在阈值效应</small></div><strong class="muted">−0.08</strong></div>
+                <div><span class="rank">5</span><div><b>海拔</b><small>通过温度间接影响</small></div><strong class="muted">+0.05</strong></div>
+              </div>
+              <div class="tip-card"><span>i</span><p>花期均温每升高 1℃，亩产平均下降约 <strong>40–60 kg</strong>。</p></div>
+            </article>
+           </div>
+
+          <div class="section-heading planting-heading">
+            <div><span class="eyebrow">PERSONALIZED PLANTING</span><h2>定制种植方案</h2></div>
+            <div class="heading-actions">
+              <button class="btn btn-outline" id="plantingDemoBtn">一键体验种植方案</button>
+              <button class="text-button" id="plantingResetBtn">重置</button>
+            </div>
+          </div>
+          <div class="planting-layout">
+            <article class="panel planting-config-panel">
+              <div class="panel-title"><div><span class="step-badge">01</span><h3>填写地块与种植目标</h3></div><span class="chip" id="plantingRegionChip">德保县</span></div>
+              <p class="form-hint">产区与上方趋势预测保持同步，所有数据仅用于演示决策流程。</p>
+              <div class="planting-form-grid">
+                <label class="field-control"><span>种植面积 <em>*</em></span><div class="input-with-unit"><input id="plantingArea" type="number" min="0.1" max="10000" step="0.1" value="20" inputmode="decimal"><i>亩</i></div><small class="field-error" id="areaError"></small></label>
+                <label class="field-control"><span>近一年亩产 <em>*</em></span><div class="input-with-unit"><input id="recentYield" type="number" min="0" max="1500" step="1" value="420" inputmode="numeric"><i>kg/亩</i></div><small class="field-error" id="yieldError"></small></label>
+                <label class="field-control"><span>树龄阶段</span><select id="treeStage"><option value="young">幼树期</option><option value="early">初果期</option><option value="mature" selected>盛果期</option><option value="old">衰老期</option></select></label>
+                <label class="field-control"><span>品种</span><select id="plantingVariety"><option value="大红八角">大红八角</option><option value="柔枝红花" selected>柔枝红花</option><option value="柔枝淡红花">柔枝淡红花</option></select></label>
+              </div>
+              <div class="form-section planting-goal-section">
+                <label class="form-label">种植目标</label>
+                <div class="planting-goal-choice" role="group" aria-label="种植目标">
+                  <button class="active" data-value="yield"><span>增</span><strong>产量优先</strong><small>强化花果期与大小年调控</small></button>
+                  <button data-value="quality"><span>质</span><strong>品质优先</strong><small>兼顾采收与加工品质</small></button>
+                  <button data-value="stable"><span>稳</span><strong>稳产优先</strong><small>控制投入与年度波动</small></button>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-wide" id="plantingPlanBtn">生成年度种植方案 →</button>
+              <p class="engine-note"><span>规则 + AI</span>数值由规则引擎计算，AI 负责个性化解读；接口异常时保留规则结果。</p>
+            </article>
+
+            <article class="panel planting-result-panel" id="plantingResultPanel">
+              <div class="panel-title"><div><span class="step-badge">02</span><h3>年度管理方案</h3></div><span class="result-tag">已匹配</span></div>
+              <div class="planting-summary">
+                <div><small>推荐策略</small><h2 id="strategyName">柔枝红花盛果增产方案</h2><p id="plantingDiagnosis">当前亩产接近区域预测区间，具备通过精细管理稳定花果量的基础。</p></div>
+                <span class="match"><strong id="plantingMatchScore">94</strong>%<small>规则匹配度</small></span>
+              </div>
+              <div class="planting-metrics">
+                <div><span>参考亩产区间</span><strong id="expectedYieldRange">440—490</strong><small>kg/亩</small></div>
+                <div><span>预计总产量</span><strong id="expectedTotalRange">8.8—9.8</strong><small>吨</small></div>
+                <div><span>年度管理重点</span><strong id="managementFocus">保花保果</strong><small id="planRegionLabel">德保县 · 盛果期</small></div>
+              </div>
+              <div class="plan-columns">
+                <section><h4>分项措施</h4><div class="plan-list" id="plantingActions"></div></section>
+                <section><h4>风险提示</h4><div class="risk-list" id="plantingRisks"></div></section>
+              </div>
+              <div class="ai-insight" id="plantingAiInsight" data-state="idle">
+                <div class="ai-insight-head"><span>AI</span><strong data-ai-title>等待生成增强解读</strong><small data-ai-model>规则方案保持有效</small></div>
+                <p data-ai-summary>点击“生成年度种植方案”后，AI 将在不修改数值的前提下补充个性化说明。</p>
+                <div data-ai-detail>产量区间与总产量始终由规则引擎计算。</div>
+              </div>
+              <div class="plan-disclaimer"><span>i</span><p id="plantingDisclaimer">本方案基于演示数据与规则生成，仅供参考，不替代当地农技人员的现场判断。</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="page" id="page-drying">
+          <div class="page-heading">
+             <div><span class="eyebrow">QUALITY DRYING PLAN</span><h1>品质干燥方案</h1><p>根据原料状态与加工目标，快速匹配更合适的八角干燥方案。</p></div>
+            <span class="status-pill amber"><i></i>规则库已加载</span>
+          </div>
+          <div class="drying-layout">
+            <article class="panel config-panel">
+              <div class="panel-title"><div><span class="step-badge">01</span><h3>设置原料与目标</h3></div></div>
+              <div class="form-section">
+                <label class="form-label">鲜果含水量</label>
+                <div class="choice-grid moisture-choice">
+                  <button data-value="high"><span>高</span><strong>＞65%</strong><small>刚采收鲜果</small></button>
+                  <button class="active" data-value="medium"><span>中</span><strong>45%–65%</strong><small>短时沥水后</small></button>
+                  <button data-value="low"><span>低</span><strong>＜45%</strong><small>已预干处理</small></button>
+                </div>
+              </div>
+              <div class="form-section">
+                <label class="form-label">生产目标</label>
+                <div class="goal-choice">
+                  <button class="active" data-value="quality"><span class="goal-icon">◇</span><div><strong>品质优先</strong><small>尽可能保留挥发油与香气</small></div><i>推荐</i></button>
+                  <button data-value="balanced"><span class="goal-icon">◐</span><div><strong>综合均衡</strong><small>兼顾品质与干燥效率</small></div></button>
+                  <button data-value="speed"><span class="goal-icon">ϟ</span><div><strong>效率优先</strong><small>缩短加工时间与周期</small></div></button>
+                </div>
+              </div>
+              <div class="form-section">
+                <label class="form-label">加工规模</label>
+                <div class="scale-choice"><button class="active" data-value="large">批量加工</button><button data-value="small">小农户 / 小批量</button></div>
+              </div>
+              <button class="btn btn-primary btn-wide" id="recommendBtn">生成干燥方案 →</button>
+            </article>
+
+            <article class="panel recommendation-panel">
+              <div class="panel-title"><div><span class="step-badge">02</span><h3>推荐方案</h3></div><span class="result-tag">智能匹配</span></div>
+              <div class="process-head"><span class="process-icon">♨</span><div><small>推荐工艺</small><h2 id="processName">热泵干燥</h2><p id="processReason">低温循环干燥，适合批量加工与品质保持</p></div><span class="match"><strong id="matchScore">96</strong>%<small>匹配度</small></span></div>
+              <div class="parameter-grid">
+                <div><span>温度</span><strong id="dryTemp">55–60<small>℃</small></strong><i>低温区间</i></div>
+                <div><span>预计时间</span><strong id="dryTime">10–14<small>h</small></strong><i>视装载量调整</i></div>
+                <div><span>目标含水率</span><strong id="targetMoisture">12.5<small>±0.5%</small></strong><i>适宜储藏</i></div>
+              </div>
+              <div class="quality-box">
+                <div class="quality-head"><span>预期品质表现</span><strong id="qualityLabel">挥发油保留：优秀</strong></div>
+                <div class="quality-scale"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="quality-labels"><span>一般</span><span>优秀</span></div>
+              </div>
+              <div class="process-steps" id="processSteps">
+                <div><span>1</span><p><strong>预处理</strong>鲜果摊放沥水，剔除病果与杂质</p></div>
+                <i></i>
+                <div><span>2</span><p><strong>恒温干燥</strong>控制温度 55–60℃，保持均匀风量</p></div>
+                <i></i>
+                <div><span>3</span><p><strong>回软检测</strong>降至目标含水率后冷却密封</p></div>
+              </div>
+              <div class="safe-note" id="safeNote"><span>✓</span><p><strong>品质安全区间</strong>推荐温度不超过 60℃，有利于保留八角挥发性风味成分。</p></div>
+              <div class="ai-insight compact" id="dryingAiInsight" data-state="idle">
+                <div class="ai-insight-head"><span>AI</span><strong data-ai-title>等待生成增强解读</strong><small data-ai-model>规则参数保持有效</small></div>
+                <p data-ai-summary>生成干燥方案后，AI 将结合原料状态解释执行重点。</p>
+                <div data-ai-detail>温度、时间与含水率不会由大模型改写。</div>
+              </div>
+            </article>
+          </div>
+          <article class="panel comparison-panel">
+            <div class="panel-title"><div><span class="eyebrow">PROCESS COMPARISON</span><h3>常见干燥方式对比</h3></div><span class="chip">工艺参考</span></div>
+            <div class="comparison-table">
+              <div class="tr th"><span>干燥方式</span><span>干燥时间</span><span>挥发油保留</span><span>色泽</span><span>适用场景</span></div>
+              <div class="tr highlighted"><span><b>热泵干燥</b><em>品质推荐</em></span><span>中等</span><span class="stars">★★★★★</span><span>较好</span><span>品质优先 · 大批量</span></div>
+              <div class="tr"><span><b>微波干燥</b></span><span>最短</span><span class="stars four">★★★★<i>★</i></span><span>最好</span><span>效率优先 · 小批量</span></div>
+              <div class="tr"><span><b>微波热泵耦合</b></span><span>较短</span><span class="stars four">★★★★<i>★</i></span><span>好</span><span>品质与效率兼顾</span></div>
+              <div class="tr"><span><b>杀青后晒干</b></span><span>4–6 天</span><span class="stars three">★★★<i>★★</i></span><span>棕红色</span><span>传统方式 · 小农户</span></div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast"><span>✓</span><p></p></div>
+  <script src="./config.js"></script>
+  <script src="./recognition-service.js"></script>
+  <script src="./ai-service.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
